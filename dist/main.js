@@ -9907,7 +9907,7 @@ console.log(a); // undefined
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/jasloe/projects/no-framework/website/node_modules/webpack-dev-server/client/index.js?http://localhost:9000 */"./node_modules/webpack-dev-server/client/index.js?http://localhost:9000");
+__webpack_require__(/*! /Users/jasloe/projects/webpack/node_modules/webpack-dev-server/client/index.js?http://localhost:9000 */"./node_modules/webpack-dev-server/client/index.js?http://localhost:9000");
 module.exports = __webpack_require__(/*! ./src/scripts/index.js */"./src/scripts/index.js");
 
 
