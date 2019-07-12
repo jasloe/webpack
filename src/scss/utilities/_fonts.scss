@@ -1,0 +1,11 @@
+// Variables, fonts
+@font-face {
+  font-family: "Work Sans Regular";
+  // note this is relative to the webpack entry, index.js
+  src: url("../static/fonts/hinted-WorkSans-Regular.woff2");
+  font-style: normal;
+}
+
+div {
+  font-family: "Work Sans Regular";
+}
