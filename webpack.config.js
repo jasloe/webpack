@@ -54,8 +54,8 @@ module.exports = {
   devtool: 'inline-source-map',
   devServer: {
     stats: "errors-only",
-    // host:  process.env.HOST,
-    // port:  process.env.PORT,
+    host:  process.env.HOST,
+    port:  process.env.PORT,
     open: true,
     contentBase: path.join(__dirname, 'dist'),
     compress: true,

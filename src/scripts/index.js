@@ -9,6 +9,3 @@ if (true) {
  console.log(a); //40
 }
 
-a = 4;
-const a;
-

@@ -7,21 +7,25 @@
 @import "layout/all";
 @import "components/all";
 
-// a {
-//   transition: transform 1s;
-// }
+:root {
+  --mainColor: #12345678;
+  font-family: system-ui;
+}
 
-// .autoprefixer-test {
-//   user-select: none;
-// }
+a {
+  transition: transform 1s;
+}
 
-// $color: blue;
 
-// @mixin autoprefixer-test {
-//   user-select: none;
-// }
 
-// .autoprefixer-test {
-//   @include autoprefixer-test;
-//   color: $color;
-// }
+@mixin autoprefixer-test {
+  user-select: none;
+}
+
+.autoprefixer-test {
+  @include autoprefixer-test;
+  color: var(--mainColor);
+}
+
+
+
