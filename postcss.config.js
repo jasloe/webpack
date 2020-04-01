@@ -19,7 +19,6 @@ module.exports = {
           '100': ['woff'],
           '900': ['woff']
         },
-        'UniversLTStd-Obl': {}
       },
       foundries: 'google hosted',
       formats: 'woff2 woff'
