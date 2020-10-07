@@ -7,4 +7,4 @@ Working with Webpack and asset management
 - Molten leading
 - Responsive typography
 - Isotope-like layout
-- Image handling, <picture> and <src>
+- Image handling, `<picture>` and `<src>`
