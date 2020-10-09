@@ -1,16 +1,24 @@
+.wrapper.honorees {
+  padding-bottom: 3rem;
+}
+
 .honorees .cards {
   display: flex;
   flex-direction: row;
   align-items: center;
-  height: 100vh;
 }
 
 .honorees .card {
   flex-basis: 50%;
 }
 
+// Reverse row director for TG
+.honorees-second .cards {
+  flex-direction: row-reverse;
+}
+
 .honorees .card-first {
-  padding: 3rem;
+  padding: 0 3rem 3rem 3rem;
 }
 
 .honorees h2 {
@@ -29,7 +37,7 @@
 .honorees p {
   @include body($blue);
 
-  &:first-of-type {
+  &:not(:last-child) {
     margin-bottom: 1rem;
   }
 }

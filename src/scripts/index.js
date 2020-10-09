@@ -26,20 +26,20 @@ function cardEnter(response) {
     translate: 250,
   });
 
-  // anime({
-  //   targets: [".is-active"],
-  //   duration: 500,
-  //   autoplay: true,
-  //   easing: "easeInOutSine",
-  //   translateY: {
-  //     value: 40,
-  //     duration: 500,
-  //   },
-  //   opacity: {
-  //     value: 1,
-  //     duration: 500,
-  //   },
-  // });
+  anime({
+    targets: [".is-active"],
+    duration: 500,
+    autoplay: true,
+    easing: "easeInOutSine",
+    translateY: {
+      value: 40,
+      duration: 500,
+    },
+    opacity: {
+      value: 1,
+      duration: 500,
+    },
+  });
 }
 
 function backgroundAnimation(response) {

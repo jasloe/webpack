@@ -1,0 +1,6 @@
+.caption {
+  @include caption($blue);
+  margin-top: 5px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}

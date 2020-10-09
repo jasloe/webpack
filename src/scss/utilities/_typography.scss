@@ -7,25 +7,27 @@ $serif-italic: "Dignitas-Italic";
 $default: $sans;
 $display: $serif;
 
+$font-large: 3rem;
+$font-medium: 2rem;
+$font-small: 1.5rem;
+$font-very-small: 0.8rem;
+$font-default: 1.3rem;
+
 h1 {
-  @include font-size(3rem);
+  @include font-size($font-large);
 }
 
 h2 {
-  @include font-size(2rem);
+  @include font-size($font-medium);
 }
 
 h3 {
-  @include font-size(1rem);
+  @include font-size($font-small);
 }
 
 p {
-  @include font-size(1.3rem);
+  @include font-size($font-default);
   line-height: 1.4;
-}
-
-@mixin title-marquee {
-  font-family: $serif;
 }
 
 @mixin title-sans-condensed($color) {
@@ -39,7 +41,17 @@ p {
   color: $color;
 }
 
-@mixin body ($color) {
+@mixin title-marquee {
+  font-family: $serif;
+  color: $yellow;
+}
+
+@mixin lede($color) {
+  color: $color;
+  @include font-size;
+}
+
+@mixin body($color) {
   font-family: $serif;
   color: $color;
 
@@ -53,7 +65,18 @@ p {
 }
 
 @mixin body-link($color) {
-  @include body($black);
-  border-bottom: 2px solid $color;
-  padding-bottom: .1rem;
+  @include body($color);
+  border-bottom: 1px solid $color;
+  padding-bottom: 0.1rem;
+  transition: color 0.4s ease;
+  &:hover {
+    color: $gray;
+    border-bottom: none;
+    transition: border-bottom 0.4s ease;
+  }
+}
+
+@mixin caption($color) {
+  @include font-size($font-very-small);
+  color: $color;
 }

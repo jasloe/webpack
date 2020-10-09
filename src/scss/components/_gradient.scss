@@ -1,0 +1,68 @@
+// Background.
+body {
+  position: relative;
+}
+
+.container-gradient {
+  background: linear-gradient(3deg, #dafc5d, #080d78);
+  background-size: 400% 400%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 100%;
+  }
+
+  50% {
+    background-position: 100% 17%;
+  }
+
+  100% {
+    background-position: 0% 100%;
+  }
+}
+
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 0% 84%;
+  }
+
+  50% {
+    background-position: 100% 17%;
+  }
+
+  100% {
+    background-position: 0% 84%;
+  }
+}
+
+@-o-keyframes AnimationName {
+  0% {
+    background-position: 0% 84%;
+  }
+
+  50% {
+    background-position: 100% 17%;
+  }
+
+  100% {
+    background-position: 0% 84%;
+  }
+}
+
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 84%;
+  }
+
+  50% {
+    background-position: 100% 17%;
+  }
+
+  100% {
+    background-position: 0% 84%;
+  }
+}
