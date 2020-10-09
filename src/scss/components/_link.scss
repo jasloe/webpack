@@ -1,0 +1,4 @@
+p a {
+  color: inherit;
+  @include body-link($black);
+}

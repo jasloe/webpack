@@ -1,0 +1,59 @@
+$sans: "TradeGothic";
+$condensed: "TradeGothic-BoldCondTwenty";
+$serif: "Dignitas-Regular";
+$serif-bold: "Dignitas-Bold";
+$serif-italic: "Dignitas-Italic";
+
+$default: $sans;
+$display: $serif;
+
+h1 {
+  @include font-size(3rem);
+}
+
+h2 {
+  @include font-size(2rem);
+}
+
+h3 {
+  @include font-size(1rem);
+}
+
+p {
+  @include font-size(1.3rem);
+  line-height: 1.4;
+}
+
+@mixin title-marquee {
+  font-family: $serif;
+}
+
+@mixin title-sans-condensed($color) {
+  font-family: $condensed, sans-serif;
+  text-transform: uppercase;
+  color: $color;
+}
+
+@mixin title-serif($color) {
+  font-family: $serif;
+  color: $color;
+}
+
+@mixin body ($color) {
+  font-family: $serif;
+  color: $color;
+
+  em {
+    font-family: $serif-italic;
+  }
+
+  strong {
+    font-family: $serif-bold;
+  }
+}
+
+@mixin body-link($color) {
+  @include body($black);
+  border-bottom: 2px solid $color;
+  padding-bottom: .1rem;
+}

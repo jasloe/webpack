@@ -1,0 +1,35 @@
+.honorees .cards {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100vh;
+}
+
+.honorees .card {
+  flex-basis: 50%;
+}
+
+.honorees .card-first {
+  padding: 3rem;
+}
+
+.honorees h2 {
+  @include title-serif($blue);
+  opacity: 0;
+
+  &:nth-child(2) {
+    margin-bottom: 1rem;
+  }
+}
+
+.honorees .about {
+  opacity: 0;
+}
+
+.honorees p {
+  @include body($blue);
+
+  &:first-of-type {
+    margin-bottom: 1rem;
+  }
+}

@@ -11,18 +11,17 @@ module.exports = {
     require('cssnano'),
     require('lost'),
     require('postcss-font-magician')({
-      aliases: {
-        'seriph': 'Nunito'
-      },
+      hosted: ['./src/fonts', './dist/fonts'],
       variants: {
-        'seriph': {
-          '100': ['woff'],
-          '900': ['woff']
-        },
-        'UniversLTStd-Obl': {}
+        'TradeGothic': {},
+        'TradeGothic-BoldCondTwenty': {},
+        'Dignitas-Regular': {},
+        'Dignitas-Bold': {},
+        'Dignitas-Italic': {},
+        'Dignitas-Bold-Italic': {}
       },
-      foundries: 'google hosted',
-      formats: 'woff2 woff'
+      foundries: 'hosted',
+      formats: 'woff'
     })
   ]
 }

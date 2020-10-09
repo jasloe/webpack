@@ -1,0 +1,19 @@
+.container-first {
+  height: 100vh;
+  background-color: red;
+  text-align: center;
+}
+
+iframe {
+  border: 1px solid blue;
+}
+
+.wrapper.video {
+  margin: 0 auto;
+  max-width: 980px;
+}
+
+section.container-second {
+  background: $yellow;
+  height: 100vh;
+}

@@ -1,8 +1,10 @@
 /* Main */
 @charset "utf-8";
 
-@import "utilities/all";
+// @import "../../node_modules/rfs/scss";
+@import "~rfs/scss";
 @import "variables/all";
+@import "utilities/all";
 @import "base/all";
 @import "layout/all";
 @import "components/all";
@@ -16,8 +18,6 @@ a {
   transition: transform 1s;
 }
 
-
-
 @mixin autoprefixer-test {
   user-select: none;
 }
@@ -26,6 +26,3 @@ a {
   @include autoprefixer-test;
   color: var(--mainColor);
 }
-
-
-
