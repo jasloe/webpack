@@ -7,64 +7,79 @@ if (true) {
   console.log(a); //40
 }
 
+// Headroom.
+import Headroom from "headroom.js";
+
+let el = document.querySelector("header");
+let headroom = new Headroom(el);
+
+headroom.init();
+
+// Scrollama, anime.
 import "intersection-observer";
 import scrollama from "scrollama";
 import anime from "animejs/lib/anime.es.js";
 
-const scroller = scrollama();
+const scroller1 = scrollama();
+const scroller2 = scrollama();
 
 function cardEnter(response) {
   response.element.classList.add("is-active");
 
   var tl = anime.timeline({
     easing: "easeInSine",
-    duration: 750,
   });
 
   tl.add({
-    targets: ".is-active",
-    translate: 250,
+    targets: ".is-active h2:first-child",
+    opacity: 1,
+    duration: 250,
   });
 
-  anime({
-    targets: [".is-active"],
-    duration: 500,
-    autoplay: true,
-    easing: "easeInOutSine",
-    translateY: {
-      value: 40,
-      duration: 500,
-    },
-    opacity: {
-      value: 1,
-      duration: 500,
-    },
+  tl.add({
+    targets: ".is-active h2:nth-child(2)",
+    translateY: 20,
+    duration: 1,
   });
-}
 
-function backgroundAnimation(response) {
-  response.element.classList.add("fade-in");
+  tl.add({
+    targets: ".is-active h2:nth-child(2)",
+    opacity: 1,
+    duration: 450,
+  });
+
+  tl.add({
+    targets: ".card-second img",
+    opacity: 1,
+    duration: 200,
+  });
+
+  tl.add({
+    targets: ".is-active .about",
+    opacity: 1,
+    duration: 450,
+  });
 }
 
 function init1() {
-  scroller
+  scroller1
     .setup({
-      step: ".step",
+      step: ".card-first",
       debug: true,
       offset: 0.75,
     })
     .onStepEnter(cardEnter);
 }
 
-// function init2() {
-//   scroller
-//     .setup({
-//       step: ".about",
-//       debug: true,
-//       offset: 0.8,
-//     })
-//     .onStepEnter(backgroundAnimation);
-// }
+function init2() {
+  scroller2
+    .setup({
+      step: ".card-second",
+      debug: true,
+      offset: 0.75,
+    })
+    .onStepEnter(cardEnter);
+}
 
-// init1();
 init1();
+init2();
