@@ -1,3 +1,13 @@
-// section {
-//   lost-center: 980px;
-// }
+.container-second,
+.container-third {
+  background: $yellow;
+  padding: 3rem 0;
+}
+
+.container-second .wrapper {
+  @include max-width;
+}
+
+.container-third .wrapper {
+  @include max-width;
+}

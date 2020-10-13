@@ -1,0 +1,43 @@
+
+.container-title  {
+
+}
+
+.container-title .title-wrapper {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 40%;
+}
+
+.container-title .title-item {
+  flex-basis: 50%;
+}
+
+// .title-item:first-child {
+//   flex-basis: 20%;
+// }
+
+// Header, typography.
+// .title-group h1 {
+//   @include title-marquee;
+// }
+
+@include mq($until: tablet) {
+  .card-title {
+    display: none;
+  }
+}
+
+.container-title h1 {
+  @include title-marquee;
+}
+
+.container-title h1.dash {
+    line-height: .5;
+}
+
+.container-title h2.lede {
+  @include title-marquee;
+}
+

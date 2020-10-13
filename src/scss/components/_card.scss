@@ -1,38 +1,86 @@
-.wrapper.honorees {
-  padding-bottom: 3rem;
-}
+.container {
+  .honoree .cards {
+    display: flex;
+    flex-direction: row;
 
-.honorees .cards {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
+    .card {
+      flex-basis: 60%;
+    }
 
-.honorees .card {
-  flex-basis: 50%;
-}
+    .portrait {
+      display: block;
+    }
 
-// Reverse row director for TG
-.honorees-second .cards {
-  flex-direction: row-reverse;
-}
-
-.honorees .card-first {
-  padding: 0 3rem 3rem 3rem;
-}
-
-.honorees h2 {
-  @include title-serif($blue);
-
-  &:nth-child(2) {
-    margin-bottom: 1rem;
+    .portrait-inset {
+      display: none;
+    }
   }
 }
 
-.honorees p {
-  @include body($blue);
 
-  &:not(:last-child) {
-    margin-bottom: 1rem;
+.portrait {
+  // padding: 0 5rem;
+}
+
+
+// Card padding.
+.container .honoree .card-first {
+  padding: 0 3rem;
+
+  .portrait-inset {
+    margin: 1rem 0rem !important;
+  }
+}
+
+// Gates.
+.container-third {
+  .honoree .cards {
+    flex-direction: row-reverse;
+  }
+}
+
+// Card mq.
+@include mq($until: desktop) {
+  .container {
+    .honoree .cards {
+      display: flex;
+      flex-direction: column;
+
+      .card {
+        flex-basis: 100%;
+      }
+
+      .portrait {
+        display: none;
+      }
+
+      .portrait-inset {
+        display: block;
+      }
+    }
+  }
+}
+
+// Card typography.
+.container-second,
+.container-third {
+  .honoree h3 {
+    @include link($blue);
+  }
+
+  .honoree h2 {
+    @include title-serif($blue);
+
+    &:nth-child(2) {
+      // margin-bottom: 1rem;
+    }
+  }
+
+  .honoree p {
+    @include body($blue);
+
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
   }
 }

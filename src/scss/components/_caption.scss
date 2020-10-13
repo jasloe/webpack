@@ -1,6 +1,14 @@
-.caption {
+.container .caption {
   @include caption($blue);
   margin-top: 5px;
-  padding-left: 1rem;
-  padding-right: 1rem;
+}
+
+.container-third .caption {
+  padding-left: 1rem
+}
+
+@include mq($until: desktop) {
+  .container .caption {
+    padding-left: 0rem;
+  }
 }

@@ -9,7 +9,7 @@ $display: $serif;
 
 $font-large: 3rem;
 $font-medium: 2rem;
-$font-small: 1.5rem;
+$font-small: 1.1rem;
 $font-very-small: 0.8rem;
 $font-default: 1.3rem;
 
@@ -46,13 +46,13 @@ p {
   color: $yellow;
 }
 
-@mixin lede($color) {
-  color: $color;
-  @include font-size;
+@mixin link($color) {
+  @include title-sans-condensed($color);
 }
 
 @mixin body($color) {
   font-family: $serif;
+  @include font-size($font-small);
   color: $color;
 
   em {

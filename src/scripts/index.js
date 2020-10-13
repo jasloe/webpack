@@ -38,7 +38,7 @@ function cardEnter(response) {
 
   tl.add({
     targets: ".is-active h2:nth-child(2)",
-    translateY: 20,
+    // translateY: 20,
     duration: 1,
   });
 
@@ -65,7 +65,7 @@ function init1() {
   scroller1
     .setup({
       step: ".card-first",
-      debug: true,
+      // debug: true,
       offset: 0.75,
     })
     .onStepEnter(cardEnter);
@@ -75,7 +75,7 @@ function init2() {
   scroller2
     .setup({
       step: ".card-second",
-      debug: true,
+      // debug: true,
       offset: 0.75,
     })
     .onStepEnter(cardEnter);
