@@ -3,15 +3,22 @@ $condensed: "TradeGothic-BoldCondTwenty";
 $serif: "Dignitas-Regular";
 $serif-bold: "Dignitas-Bold";
 $serif-italic: "Dignitas-Italic";
+$headline: "FlechaM-Light";
 
 $default: $sans;
 $display: $serif;
+$button: $headline;
 
 $font-large: 3rem;
 $font-medium: 2rem;
 $font-small: 1.1rem;
 $font-very-small: 0.8rem;
 $font-default: 1.3rem;
+
+$font-label-large: 1.7rem;
+$font-label-small: 1rem;
+
+$font-button: 2rem;
 
 h1 {
   @include font-size($font-large);
@@ -42,11 +49,15 @@ p {
 }
 
 @mixin title-marquee {
-  font-family: $serif;
+  font-family: $headline;
   color: $yellow;
 }
 
 @mixin link($color) {
+  @include title-sans-condensed($color);
+}
+
+@mixin label($color) {
   @include title-sans-condensed($color);
 }
 

@@ -1,6 +1,7 @@
 html {
   box-sizing: border-box;
   font-size: 18px;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -9,7 +10,8 @@ html {
   box-sizing: inherit;
 }
 
-::selection {}
+::selection {
+}
 
 .hidden {
   display: none;
@@ -18,5 +20,3 @@ html {
 a {
   text-decoration: none;
 }
-
-

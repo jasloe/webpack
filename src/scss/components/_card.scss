@@ -17,11 +17,19 @@
   }
 }
 
-
-.portrait {
-  // padding: 0 5rem;
+.container .auction .cards {
+  display: flex;
+  flex-direction: column;
 }
 
+.container .committee {
+  display: flex;
+  flex-direction: column;
+}
+
+// .portrait {
+//   padding: 0 5rem;
+// }
 
 // Card padding.
 .container .honoree .card-first {
@@ -32,10 +40,80 @@
   }
 }
 
+.container .auction .card {
+  padding-bottom: 2rem;
+}
+
+.container .committee button {
+  margin-bottom: 1rem;
+}
+
 // Gates.
 .container-third {
   .honoree .cards {
     flex-direction: row-reverse;
+  }
+}
+
+// Card typography.
+.container-second,
+.container-third {
+  .honoree h3 {
+    @include label($blue);
+  }
+
+  .honoree h2 {
+    @include title-serif($blue);
+
+    &:nth-child(2) {
+      // margin-bottom: 1rem;
+    }
+  }
+
+  .honoree p {
+    @include body($blue);
+
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.container-fourth {
+  .auction h3 {
+    @include label($blue);
+    @include font-size($font-label-large);
+  }
+  .auction p {
+    @include body($blue);
+  }
+  .auction .card:nth-child(1) p {
+    @include font-size($font-medium);
+  }
+  .auction .card:nth-child(2) p {
+    @include font-size($font-medium);
+  }
+  .auction .card:nth-child(2) span {
+    @include label($blue);
+    @include font-size($font-label-large);
+  }
+  .auction .card:nth-child(3) h3 {
+    padding-bottom: 1rem;
+  }
+}
+
+.container-fifth {
+  .committee h3 {
+    @include label($black);
+    @include font-size($font-label-small);
+  }
+  .committee .card:nth-child(1) p {
+    color: $white !important;
+    margin-bottom: 3rem;
+  }
+
+  .committee .card:nth-child(2) p {
+    @include body($black);
   }
 }
 
@@ -57,30 +135,6 @@
       .portrait-inset {
         display: block;
       }
-    }
-  }
-}
-
-// Card typography.
-.container-second,
-.container-third {
-  .honoree h3 {
-    @include link($blue);
-  }
-
-  .honoree h2 {
-    @include title-serif($blue);
-
-    &:nth-child(2) {
-      // margin-bottom: 1rem;
-    }
-  }
-
-  .honoree p {
-    @include body($blue);
-
-    &:not(:last-child) {
-      margin-bottom: 1rem;
     }
   }
 }

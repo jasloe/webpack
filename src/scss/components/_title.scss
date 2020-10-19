@@ -1,13 +1,8 @@
-
-.container-title  {
-
-}
-
 .container-title .title-wrapper {
   display: flex;
   align-items: center;
   margin: 0 auto;
-  max-width: 40%;
+  max-width: 40vw;
 }
 
 .container-title .title-item {
@@ -31,13 +26,13 @@
 
 .container-title h1 {
   @include title-marquee;
+  font-family: $headline;
 }
 
 .container-title h1.dash {
-    line-height: .5;
+  line-height: 0.5;
 }
 
 .container-title h2.lede {
   @include title-marquee;
 }
-

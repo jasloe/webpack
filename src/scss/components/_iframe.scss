@@ -1,10 +1,9 @@
 .container-first {
-  position: sticky;
-  top: 0;
-    background-color: $blue;
+  // position: sticky;
+  // top: 0;
+  background-color: $blue;
   .wrapper {
     @include max-width;
-
 
     .wrapper-video {
       position: relative;

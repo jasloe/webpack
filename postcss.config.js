@@ -8,20 +8,6 @@ module.exports = {
       }
     }),
     require('autoprefixer'),
-    require('cssnano'),
-    require('lost'),
-    require('postcss-font-magician')({
-      hosted: ['./src/fonts', './dist/fonts'],
-      variants: {
-        'TradeGothic': {},
-        'TradeGothic-BoldCondTwenty': {},
-        'Dignitas-Regular': {},
-        'Dignitas-Bold': {},
-        'Dignitas-Italic': {},
-        'Dignitas-Bold-Italic': {}
-      },
-      foundries: 'hosted',
-      formats: 'woff'
-    })
+    require('cssnano')
   ]
 }

@@ -1,13 +1,40 @@
+.container-buttons,
+.container-second,
+.container-third,
+.container-fourth,
+.container-fifth {
+  .wrapper {
+    @include max-width;
+  }
+}
+
+.container-buttons {
+  background: $blue;
+}
+
 .container-second,
 .container-third {
   background: $yellow;
-  padding: 3rem 0;
 }
 
-.container-second .wrapper {
-  @include max-width;
+.container-fifth {
+  background: $blue;
 }
 
-.container-third .wrapper {
-  @include max-width;
+// Vertical padding.
+.container-second,
+.container-third {
+  padding-top: 3rem;
+}
+
+.container-third {
+  padding-bottom: 3rem;
+}
+
+.container-fourth {
+  padding: 3rem;
+}
+
+.container-fifth {
+  padding: 3rem;
 }
