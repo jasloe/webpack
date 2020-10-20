@@ -105,7 +105,8 @@
   }
 
   .committee .card:nth-child(1) p {
-    color: $white !important;
+    @include body($white);
+    @include font-size($font-label-large)
     margin-top: 2rem;
     margin-bottom: 3rem;
   }
