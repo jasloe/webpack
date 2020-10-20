@@ -27,13 +27,8 @@
   flex-direction: column;
 }
 
-// .portrait {
-//   padding: 0 5rem;
-// }
-
 // Card padding.
 .container .honoree .card-first {
-  padding: 0 3rem;
 
   .portrait-inset {
     margin: 1rem 0rem !important;
@@ -45,10 +40,6 @@
   &:last-child {
     padding-bottom: 0;
   }
-}
-
-.container .committee button {
-  margin-bottom: 1rem;
 }
 
 // Gates.
@@ -110,8 +101,10 @@
     @include label($black);
     @include font-size($font-label-small);
   }
+
   .committee .card:nth-child(1) p {
     color: $white !important;
+    margin-top: 2rem;
     margin-bottom: 3rem;
   }
 

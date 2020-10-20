@@ -21,7 +21,14 @@
   background: $blue;
 }
 
-// Vertical padding.
+// Padding.
+.container-second,
+.container-third {
+  .card-first {
+@include padding-rl;
+  }
+}
+
 .container-second,
 .container-third {
   padding-top: 3rem;
@@ -32,9 +39,11 @@
 }
 
 .container-fourth {
-  padding: 3rem;
+    @include padding-tb;
+@include padding-rl;
 }
 
 .container-fifth {
-  padding: 3rem;
+  @include padding-tb;
+  @include padding-rl;
 }

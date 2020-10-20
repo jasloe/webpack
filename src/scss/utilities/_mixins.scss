@@ -2,3 +2,18 @@
   margin: 0 auto;
   max-width: $max-vw;
 }
+
+@mixin padding-rl{
+  padding-right: 3rem;
+  padding-left: 3rem;
+
+  @include mq($until: tablet) {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+}
+
+@mixin padding-tb {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
