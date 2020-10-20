@@ -3,6 +3,7 @@
   max-width: $max-vw;
 }
 
+// Sets right left padding of containers.
 @mixin padding-rl{
   padding-right: 3rem;
   padding-left: 3rem;
@@ -13,6 +14,7 @@
   }
 }
 
+// Sets top bottom padding of containers.
 @mixin padding-tb {
   padding-top: 3rem;
   padding-bottom: 3rem;
