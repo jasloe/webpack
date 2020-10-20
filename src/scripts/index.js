@@ -15,7 +15,7 @@ let headroom = new Headroom(el);
 
 headroom.init();
 
-// Scrollama, anime.
+// Scrollama, anime.js.
 import "intersection-observer";
 import scrollama from "scrollama";
 import anime from "animejs/lib/anime.es.js";
