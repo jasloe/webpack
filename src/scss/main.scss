@@ -8,20 +8,3 @@
 @import "layout/all";
 @import "components/all";
 
-:root {
-  --mainColor: #12345678;
-  font-family: system-ui;
-}
-
-a {
-  transition: transform 1s;
-}
-
-@mixin autoprefixer-test {
-  user-select: none;
-}
-
-.autoprefixer-test {
-  @include autoprefixer-test;
-  color: var(--mainColor);
-}

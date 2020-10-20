@@ -116,7 +116,7 @@
   }
 }
 
-// Card mq.
+// Card media query.
 @include mq($until: desktop) {
   .container {
     .honoree .cards {
