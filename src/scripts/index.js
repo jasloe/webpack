@@ -11,7 +11,10 @@ if (true) {
 import Headroom from "headroom.js";
 
 let el = document.querySelector("header");
-let headroom = new Headroom(el);
+let headroom = new Headroom(el, {
+ "offset": 200,
+  "tolerance": 10
+});
 
 headroom.init();
 

@@ -1,6 +1,14 @@
 header {
-  margin: 0 auto;
-  padding: 3rem 1rem;
   background-color: $blue;
 }
 
+.menu-wrapper {
+@include max-width;
+padding: .5rem;
+}
+
+.site-name {
+  @include label($yellow);
+  text-align: left;
+  letter-spacing: .02rem;
+}
