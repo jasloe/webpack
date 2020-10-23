@@ -4,11 +4,11 @@ header {
 
 .menu-wrapper {
 @include max-width;
-padding: .5rem;
+padding: 1rem;
 }
 
 .site-name {
   @include label($yellow);
-  text-align: left;
+  text-align: center;
   letter-spacing: .02rem;
 }

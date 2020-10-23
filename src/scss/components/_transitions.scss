@@ -1,11 +1,15 @@
-.honorees h2 {
-  opacity: 1;
+.honoree h2 {
+  opacity: 0;
 }
 
-.honorees .about {
-  opacity: 1;
+.honoree .about {
+    opacity: 0;
 }
 
-.card-second img {
-  opacity: 1;
+.honoree .portrait-desktop-wrapper {
+  opacity: 0;
+}
+
+.return-wrapper {
+  opacity: 0;
 }

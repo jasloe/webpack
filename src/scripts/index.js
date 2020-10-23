@@ -38,36 +38,38 @@ function cardEnter(response) {
     duration: 250,
   });
 
-  tl.add({
-    targets: ".is-active h2:nth-child(2)",
-    // translateY: 20,
-    duration: 1,
-  });
-
-  tl.add({
+    tl.add({
     targets: ".is-active h2:nth-child(2)",
     opacity: 1,
-    duration: 450,
+    duration: 250,
   });
 
-  tl.add({
-    targets: ".card-second img",
+    tl.add({
+    targets: ".is-active .portrait-desktop-wrapper",
     opacity: 1,
-    duration: 200,
+    duration: 250,
   });
 
   tl.add({
     targets: ".is-active .about",
     opacity: 1,
-    duration: 450,
+    duration: 250,
   });
+
+    tl.add({
+    targets: ".return-wrapper",
+    opacity: 1,
+    duration: 250,
+  });
+
+
 }
 
 function init1() {
   scroller1
     .setup({
       step: ".card-first",
-      // debug: true,
+      debug: true,
       offset: 0.75,
     })
     .onStepEnter(cardEnter);
