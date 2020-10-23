@@ -1,3 +1,18 @@
 img {
   width: 100%;
 }
+
+.portrait-desktop,
+.portrait-inset {
+  background: #2b1dae;
+  line-height: 0;
+}
+
+.portrait-desktop,
+.portrait-inset {
+  img {
+    filter: grayscale(100%) contrast(1) blur(0);
+    mix-blend-mode: screen;
+    line-height: 0;
+  }
+}

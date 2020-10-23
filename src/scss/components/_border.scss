@@ -1,9 +1,0 @@
-.border .wrapper {
-  background-color: $yellow;
-}
-
-.border {
-  @include max-width;
-  background-color: $yellow;
-  border: 1rem dashed $blue;
-}

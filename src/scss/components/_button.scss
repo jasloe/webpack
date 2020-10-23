@@ -45,7 +45,7 @@
   }
 }
 
-.committee a {
+.committee a.custom-dbox-popup {
   background-color: transparent;
   background-repeat: no-repeat;
   cursor: pointer;
@@ -67,5 +67,40 @@
 
 .return-wrapper {
   @include max-width;
-  margin-top: 1rem;
+  margin: 1rem 0 0 0;
+}
+.honoree,
+.auction {
+  .fa-arrow-up {
+    color: $blue;
+  }
+}
+
+.committee .fa-arrow-up {
+  color: $white;
+}
+
+.fa-arrow-up {
+  transition: color 0.22s ease;
+  &:visited {
+    color: $blue;
+    transition: color 0.22s ease;
+  }
+}
+
+.fa-arrow-up {
+  &:hover {
+    color: $gray;
+    transition: color 0.22s ease;
+  }
+}
+
+.card.artsy {
+  display: flex;
+  align-items: center;
+}
+
+.card.artsy img {
+  width: 100px;
+  margin-left: 0.5rem;
 }

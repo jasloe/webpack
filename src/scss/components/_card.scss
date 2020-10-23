@@ -1,20 +1,42 @@
 // Honorees.
-.container {
-  .honoree .cards {
-    display: flex;
-    flex-direction: row;
+.honoree .cards {
+  display: flex;
+  flex-direction: row;
+
+  .card {
+    flex-basis: 50%;
+  }
+
+  .card-first .portrait-inset-wrapper {
+    display: none;
+  }
+
+  .card-second {
+    flex-basis: 50%;
+  }
+
+  @include mq($until: desktop) {
+    flex-direction: column;
 
     .card {
-      flex-basis: 60%;
+      flex-basis: 100%;
     }
 
-    .portrait {
-      display: block;
+    .card-first .portrait-inset-wrapper {
+      display: flex;
+      flex-direction: column;
     }
 
-    .portrait-inset {
+    .card-second {
       display: none;
     }
+  }
+}
+
+// Gates.
+.container-third {
+  .honoree .cards {
+    flex-direction: row-reverse;
   }
 }
 
@@ -31,8 +53,7 @@
 
 // Card padding.
 .container .honoree .card-first {
-
-  .portrait-inset {
+  .portrait-inset-wrapper {
     margin: 1rem 0rem !important;
   }
 }
@@ -44,22 +65,11 @@
   }
 }
 
-// Gates.
-.container-third {
-  .honoree .cards {
-    flex-direction: row-reverse;
-  }
-}
-
 // Card typography.
 .container-second,
 .container-third {
-  .honoree h3 {
-    @include label($blue);
-  }
-
   .honoree h2 {
-    @include title-serif($blue);
+    @include title-sans-condensed($blue);
 
     &:nth-child(2) {
       // margin-bottom: 1rem;
@@ -96,6 +106,9 @@
   .auction .card:nth-child(3) h3 {
     padding-bottom: 1rem;
   }
+  .auction .artsy {
+    margin-bottom: 1rem;
+  }
 }
 
 .container-fifth {
@@ -106,34 +119,11 @@
 
   .committee .card:nth-child(1) p {
     @include body($white);
-    @include font-size($font-label-large)
-    margin-top: 2rem;
+    @include font-size($font-label-large) margin-top: 2rem;
     margin-bottom: 3rem;
   }
 
   .committee .card:nth-child(2) p {
     @include body($black);
-  }
-}
-
-// Card media query.
-@include mq($until: desktop) {
-  .container {
-    .honoree .cards {
-      display: flex;
-      flex-direction: column;
-
-      .card {
-        flex-basis: 100%;
-      }
-
-      .portrait {
-        display: none;
-      }
-
-      .portrait-inset {
-        display: block;
-      }
-    }
   }
 }

@@ -1,74 +1,79 @@
-const path = require('path');
-const {
-  CleanWebpackPlugin
-} = require('clean-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require("path");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
-  entry: './src/scripts/index.js',
+  entry: "./src/scripts/index.js",
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, "dist"),
   },
   module: {
-    rules: [{
+    rules: [
+      {
         test: /\.js$/,
         exclude: /(node_modules)/,
         use: {
-          loader: 'babel-loader',
+          loader: "babel-loader",
           options: {
-            presets: ['@babel/preset-env']
-          }
-        }
+            presets: ["@babel/preset-env"],
+          },
+        },
       },
       {
         test: /\.(sa|sc|c)ss$/,
-        use: [{
-            loader: MiniCssExtractPlugin.loader
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
           },
           {
-            loader: "css-loader"
+            loader: "css-loader",
           },
           {
-            loader: "postcss-loader"
+            loader: "postcss-loader",
           },
           {
-            loader: "sass-loader"
-          }
-        ]
+            loader: "resolve-url-loader",
+          },
+          {
+            loader: "sass-loader",
+          },
+        ],
       },
       {
         test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
-        use: [{
-          loader: 'file-loader',
-          options: {
-            name: '[name].[ext]',
-            outputPath: 'fonts/'
-          }
-        }]
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              name: "[name].[ext]",
+              outputPath: "fonts/",
+            },
+          },
+        ],
       },
-    ]
+    ],
   },
-  devtool: 'inline-source-map',
+  devtool: "inline-source-map",
   devServer: {
     stats: "errors-only",
     host: process.env.HOST,
     port: process.env.PORT,
     open: true,
-    contentBase: path.join(__dirname, 'dist'),
+    contentBase: path.join(__dirname, "dist"),
     compress: true,
     port: 3333,
-    writeToDisk: true
+    writeToDisk: true,
   },
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      template: 'src/index.html'
+      template: "src/index.html",
     }),
     new MiniCssExtractPlugin({
       filename: "[name].css",
-      chunkFilename: "[id].css"
+      chunkFilename: "[id].css",
     }),
   ],
-  mode: 'development'
+  mode: "development",
 };

@@ -11,14 +11,13 @@ if (true) {
 import Headroom from "headroom.js";
 
 let el = document.querySelector("header");
-let headroom = new Headroom(el, {
- "offset": 200,
-  "tolerance": 10
-});
+let headroom = new Headroom(el);
 
 headroom.init();
 
-// Scrollama, anime.js.
+// Smooth scrolling polyfill.
+
+// Scrollama, anime.
 import "intersection-observer";
 import scrollama from "scrollama";
 import anime from "animejs/lib/anime.es.js";
