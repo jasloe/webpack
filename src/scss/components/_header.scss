@@ -3,7 +3,7 @@ header {
 }
 
 .menu-wrapper {
-@include max-width;
+@include max-width; // ?
 padding: 1rem;
 }
 

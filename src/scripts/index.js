@@ -61,8 +61,6 @@ function cardEnter(response) {
     opacity: 1,
     duration: 250,
   });
-
-
 }
 
 function init1() {
