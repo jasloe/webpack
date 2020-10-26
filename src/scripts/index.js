@@ -67,7 +67,7 @@ function init1() {
   scroller1
     .setup({
       step: ".card-first",
-      debug: true,
+      debug: false,
       offset: 0.75,
     })
     .onStepEnter(cardEnter);
@@ -77,7 +77,7 @@ function init2() {
   scroller2
     .setup({
       step: ".card-second",
-      // debug: true,
+      debug: false,
       offset: 0.75,
     })
     .onStepEnter(cardEnter);
