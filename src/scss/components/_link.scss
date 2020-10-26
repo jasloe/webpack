@@ -1,3 +1,16 @@
-p a {
-  @include body-link($blue); // ?
+.honoree p a {
+  @include body-link($blue);
+}
+
+.auction .inline-link a,
+.auction h3 a {
+  @include label($blue);
+  @include font-size($font-label-large);
+  border-bottom: 2px solid $blue;
+  transition: color 0.22s ease;
+  &:hover {
+    color: $gray;
+    border-bottom: none;
+    transition: color 0.22s ease;
+  }
 }

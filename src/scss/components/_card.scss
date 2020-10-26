@@ -107,11 +107,9 @@
     @include label($blue);
     @include font-size($font-label-large);
   }
+
   .auction .card:nth-child(3) h3 {
     padding-bottom: 1rem;
-  }
-  .auction .artsy {
-    margin-bottom: 1rem;
   }
 }
 
@@ -119,8 +117,8 @@
   .committee h3 {
     @include label($white);
     @include font-size($font-label-small);
-    margin-bottom: .5rem;
-    letter-spacing: .02rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.02rem;
   }
 
   .committee .card:first-child p {
@@ -136,5 +134,4 @@
   .committee .card:last-child {
     margin-bottom: 0;
   }
-
 }
